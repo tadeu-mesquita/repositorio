@@ -7,7 +7,7 @@ header{
     height:500px;
     background-color:rgb(238, 175, 175);
     background-image: url(fundo.png);
-    background-position: left,left;
+   background-position: left,center;
     background-size: cover;
     margin: auto;
     position: relative;
@@ -27,7 +27,7 @@ main{
     margin: auto;
     min-width: 320px;
     max-width: 100%;
-    border: solid;
+   
 }
 
 p{
@@ -36,38 +36,32 @@ p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
     margin: auto;
-    padding: 10px 21px
+    padding: 10px 50px;
 
 }
 ul{
     color: #004AAD;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-left: 21px;
-    padding-right: 21px;
+    padding-left: 50px;
+    padding-right: 16px;
+    columns: 2;
+}
+li{
+    margin: 7px;
+    padding-top: 0px;
+}
+
+div.lista{
+    
+    border-radius: 15px;
+    background-color: #34d6db;
 }
 section{
     margin: 33px;
 }
 
-footer{
-    min-width: 320px;
-    max-width: 100%;
-    background-color: bisque;
-    border:solid;
-    margin: auto;
-}
-
-h3{ 
-    width: 100%;
-    background-color: aqua;
-    width: 365px;
-    height: 235px;
-    
-}
-
-#fale{
-    background-color: brown;
-    width:   363px;
-    height: 100px;
-    margin: auto;
+aside{
+    margin: 0px;
+    padding-left: 63px;
+    padding-top: 10px;
 }
