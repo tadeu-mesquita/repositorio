@@ -1,0 +1,21 @@
+@media (max-width: 600px) {
+	.container {
+	  padding: 10px;
+	}
+	.timeline-item::before {
+	  left: 0;
+	  top: -30px;
+	  background: #3498db;
+	  padding: 3px;
+	  border-radius: 3px;
+	  font-size: 12px;
+	}
+	.timeline-item {
+	  margin: 20px 0;
+	  padding: 15px;
+	}
+	.input-section input, .input-section button {
+	  font-size: 14px;
+	  padding: 8px;
+	}
+  }

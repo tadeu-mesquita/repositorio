@@ -1,0 +1,78 @@
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	margin: 0;
+	padding: 20px;
+  }
+  .container {
+	max-width: 800px;
+	margin: auto;
+  }
+  .input-section, .timeline {
+	background: white;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .input-section input, .input-section button {
+	padding: 10px;
+	margin: 5px 0;
+	width: 100%;
+  }
+  .timeline {
+	position: relative;
+  }
+  .timeline-item {
+	background: #ddd;
+	padding: 10px;
+	margin: 10px 0;
+	border-left: 5px solid #3498db;
+	border-radius: 5px;
+	position: relative;
+  }
+  .timeline-item::before {
+	content: attr(data-date);
+	position: absolute;
+	left: -100px;
+	top: 10px;
+	background: #3498db;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+  }
+  .timeline-item:nth-child(even) {
+	border-left-color: #e74c3c;
+  }
+  .download-btn {
+	background-color: #2ecc71;
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	width: 100%;
+  }
+  .timeline-item::before {
+	content: attr(data-date);
+	position: absolute;
+	left: -120px; /* Aumenta o espaço para a fase da vida */
+	top: 10px;
+	background: #3498db;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+	white-space: nowrap; /* Garante que o texto não quebre em linhas */
+  }
+  /* Estilo da timeline-item */
+.timeline-item {
+	padding: 10px;
+	margin: 10px 0;
+	background-color: #f4f4f4;
+	border-radius: 8px;
+	border: 1px solid #ddd;
+	max-width: 100%; /* Garante que o item não ultrapasse a largura do formulário */
+	word-wrap: break-word; /* Quebra palavras longas */
+	white-space: pre-wrap; /* Preserva as quebras de linha */
+  }
+  
