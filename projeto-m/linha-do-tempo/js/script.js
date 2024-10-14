@@ -125,3 +125,38 @@ function adicionarEvento() {
 	document.getElementById('fase-da-vida').value = '';
   }
   
+  function adicionarEvento() {
+	const evento = document.getElementById('evento').value;
+	const faseDaVida = document.getElementById('fase-da-vida').value;
+  
+	if (evento === '' || faseDaVida === '') {
+	  alert('Por favor, preencha todos os campos.');
+	  return;
+	}
+  
+	const timeline = document.getElementById('timeline');
+	const eventoDiv = document.createElement('div');
+	eventoDiv.classList.add('event');
+  
+	const faseDiv = document.createElement('div');
+	faseDiv.classList.add('quadro-destaque'); // Adiciona a classe para o quadro de destaque
+	faseDiv.textContent = faseDaVida; // Adiciona o texto da fase da vida
+  
+	const descricaoP = document.createElement('p');
+	descricaoP.textContent = evento;
+  
+	const excluirBtn = document.createElement('button');
+	excluirBtn.textContent = 'Excluir';
+	excluirBtn.classList.add('delete-btn');
+	excluirBtn.onclick = function() {
+	  timeline.removeChild(eventoDiv);
+	};
+  
+	eventoDiv.appendChild(faseDiv); // Adiciona o quadro de destaque
+	eventoDiv.appendChild(descricaoP);
+	eventoDiv.appendChild(excluirBtn); // Adiciona o botão de excluir
+	timeline.appendChild(eventoDiv);
+  
+	document.getElementById('evento').value = '';
+	document.getElementById('fase-da-vida').value = '';
+  }
