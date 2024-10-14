@@ -1,78 +1,80 @@
-
 body {
 	font-family: Arial, sans-serif;
-	background-color: #f0f0f0;
-	margin: 0;
-	padding: 20px;
-  }
-  .container {
-	max-width: 800px;
-	margin: auto;
-  }
-  .input-section, .timeline {
-	background: white;
-	padding: 20px;
-	margin-bottom: 20px;
-	border-radius: 8px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  .input-section input, .input-section button {
-	padding: 10px;
-	margin: 5px 0;
-	width: 100%;
-  }
-  .timeline {
-	position: relative;
-  }
-  .timeline-item {
-	background: #ddd;
-	padding: 10px;
-	margin: 10px 0;
-	border-left: 5px solid #3498db;
-	border-radius: 5px;
-	position: relative;
-  }
-  .timeline-item::before {
-	content: attr(data-date);
-	position: absolute;
-	left: -100px;
-	top: 10px;
-	background: #3498db;
-	color: white;
-	padding: 5px;
-	border-radius: 5px;
-  }
-  .timeline-item:nth-child(even) {
-	border-left-color: #e74c3c;
-  }
-  .download-btn {
-	background-color: #2ecc71;
-	color: white;
-	border: none;
-	padding: 10px;
-	cursor: pointer;
-	width: 100%;
-  }
-  .timeline-item::before {
-	content: attr(data-date);
-	position: absolute;
-	left: -120px; /* Aumenta o espaço para a fase da vida */
-	top: 10px;
-	background: #3498db;
-	color: white;
-	padding: 5px;
-	border-radius: 5px;
-	white-space: nowrap; /* Garante que o texto não quebre em linhas */
-  }
-  /* Estilo da timeline-item */
-.timeline-item {
-	padding: 10px;
-	margin: 10px 0;
-	background-color: #f4f4f4;
-	border-radius: 8px;
-	border: 1px solid #ddd;
-	max-width: 100%; /* Garante que o item não ultrapasse a largura do formulário */
-	word-wrap: break-word; /* Quebra palavras longas */
-	white-space: pre-wrap; /* Preserva as quebras de linha */
+	background-color: #f5f5f5;
+	display: flex;
+	justify-content: center; /* Centraliza horizontalmente */
+	align-items: center; /* Centraliza verticalmente */
+	height: 100vh; /* Ocupa toda a altura da janela */
+	margin: 0; /* Remove margens padrão */
   }
   
+  .container {
+	width: 80%; /* Ajusta a largura do container para 80% da tela */
+	margin: 0 auto; /* Centraliza o container */
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra leve */
+	background-color: #fff; /* Cor de fundo do container */
+	border-radius: 8px; /* Borda arredondada */
+  }
+  
+  .input-section {
+	display: flex;
+	flex-direction: column; /* Garante que os elementos fiquem empilhados */
+  }
+  
+  .input-section input,
+  .input-section select {
+	width: 100%; /* Garante que o campo de entrada e seleção ocupem 100% da largura */
+	padding: 10px; /* Adiciona padding para um melhor espaçamento interno */
+	margin: 10px 0; /* Adiciona margem entre os elementos */
+	border: 1px solid #ccc; /* Adiciona borda cinza */
+	border-radius: 4px; /* Borda arredondada para os inputs */
+	box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
+  }
+  
+  .timeline {
+	width: 100%; /* Garante que a timeline ocupe 100% da largura */
+	margin: 20px 0;
+	padding: 10px;
+	border: 1px solid black; 
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
+  }
+  
+  .timeline-item {
+	margin: 10px 0; /* Reduz a margem para mais espaço vertical */
+	padding: 10px; /* Ajusta o padding */
+	font-size: 14px; /* Ajusta o tamanho da fonte */
+	width: 100%; /* Garante que o item da linha do tempo ocupe 100% da largura */
+	box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
+  }
+  
+  .input-section button,
+  .download-btn {
+	padding: 10px; /* Ajusta o padding do botão de download */
+	font-size: 14px; /* Ajusta o tamanho da fonte do botão de download */
+	width: 100%; /* Garante que o botão ocupe 100% da largura */
+	margin-top: 10px; /* Margem superior para espaço entre botões */
+  }
+  .event p {
+	margin-top: 5px;
+	word-wrap: break-word; /* Quebra de linha dentro dos eventos */
+	overflow-wrap: break-word;
+  }
+  
+  .download-btn {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 10px; /* Espaço acima do botão de download */
+	display: block; /* Faz o botão de download ocupar toda a largura */
+	width: 100%; /* Faz o botão de download ocupar toda a largura */
+  }
+  
+  .download-btn:hover {
+	background-color: #0056b3; /* Tom mais escuro ao passar o mouse */
+  }

@@ -1,21 +1,46 @@
 @media (max-width: 600px) {
 	.container {
 	  padding: 10px;
+	  width: 100%; /* Garante que a largura do container seja 100% */
+	  box-shadow: none; /* Remove a sombra para evitar excesso de espaçamento */
 	}
-	.timeline-item::before {
-	  left: 0;
-	  top: -30px;
-	  background: #3498db;
-	  padding: 3px;
-	  border-radius: 3px;
-	  font-size: 12px;
+  
+	.input-section {
+	  display: flex;
+	  flex-direction: column; /* Garante que os elementos fiquem empilhados */
 	}
-	.timeline-item {
+  
+	.input-section input {
+	  width: 100%; /* Garante que o campo de entrada ocupe 100% da largura */
+	  box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
+	}
+  
+	.input-section select {
+	  width: 100%; /* Garante que o campo de seleção ocupe 100% da largura */
+	  box-sizing: border-box; /* Inclui padding e borda na largura total */
+	}
+  
+	.timeline {
+	  width: 100%; /* Garante que a timeline ocupe 100% da largura */
 	  margin: 20px 0;
-	  padding: 15px;
+	  padding: 10px;
+	  border: 1px solid black; 
+	  border-radius: 5px;
+	  background-color: #f9f9f9;
+	  box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
 	}
-	.input-section input, .input-section button {
-	  font-size: 14px;
-	  padding: 8px;
+  
+	.timeline-item {
+	  margin: 10px 0; /* Reduz a margem para mais espaço vertical */
+	  padding: 10px; /* Ajusta o padding */
+	  font-size: 14px; /* Ajusta o tamanho da fonte */
+	  width: 100%; /* Garante que o item da linha do tempo ocupe 100% da largura */
+	  box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
+	}
+  
+	.input-section button,
+	.download-btn {
+	  padding: 10px; /* Ajusta o padding do botão de download */
+	  font-size: 14px; /* Ajusta o tamanho da fonte do botão de download */
 	}
   }

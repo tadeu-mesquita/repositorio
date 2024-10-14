@@ -70,4 +70,57 @@ function adicionarEvento() {
 	  adicionarEvento();
 	}
   });
+
+  // Função para mostrar a fase da vida selecionada
+function mostrarFaseSelecionada() {
+	const faseDaVida = document.getElementById('fase-da-vida').value;
+	const faseSelecionadaDiv = document.getElementById('faseSelecionada');
+  
+	if (faseDaVida) {
+	  faseSelecionadaDiv.textContent = `Fase da vida selecionada: ${faseDaVida}`;
+	} else {
+	  faseSelecionadaDiv.textContent = ''; // Limpa o conteúdo se nenhuma fase for selecionada
+	}
+  }
+  
+  function adicionarEvento() {
+	const evento = document.getElementById('evento').value;
+	const faseDaVida = document.getElementById('fase-da-vida').value;
+  
+	if (evento === '' || faseDaVida === '') {
+	  alert('Por favor, preencha todos os campos.');
+	  return;
+	}
+  
+	const timeline = document.getElementById('timeline');
+	const eventoDiv = document.createElement('div');
+	eventoDiv.classList.add('event');
+  
+	const faseSpan = document.createElement('span');
+	faseSpan.classList.add('fase');
+	faseSpan.textContent = faseDaVida;
+  
+	const descricaoP = document.createElement('p');
+	descricaoP.textContent = evento;
+  
+	eventoDiv.appendChild(faseSpan);
+	eventoDiv.appendChild(descricaoP);
+	timeline.appendChild(eventoDiv);
+  
+	document.getElementById('evento').value = '';
+	document.getElementById('fase-da-vida').value = '';
+	document.getElementById('faseSelecionada').textContent = ''; // Limpa a fase selecionada após adicionar o evento
+  }
+  
+  function baixarImagem() {
+	const timelineElement = document.getElementById('timeline');
+  
+	html2canvas(timelineElement).then(function(canvas) {
+	  const link = document.createElement('a');
+	  link.download = 'linha-do-tempo.png';
+	  link.href = canvas.toDataURL();
+	  link.click();
+	});
+  }
+  
   
